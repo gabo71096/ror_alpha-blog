@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'home#index'
   get 'about', to: 'home#about'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :articles, only: [:show]
 end
