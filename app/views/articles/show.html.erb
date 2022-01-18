@@ -1,5 +1,22 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.description %></p>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Delete', article_path(@article), method: :delete, data: {confirm: 'Are you sure?'} %> |
-<%= link_to 'Return to articles', articles_path %>
+<div class="container mt-4">
+  <h1 class="text-center"><%= @article.title %></h1>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <div class="card text-center shadow rounded mt-4 mb-5 bg-white">
+        <div class="card-header">
+          <p class="fst-italic m-0">
+            by Gabriel López
+          </p>
+        </div>
+        <div class="card-body">
+          <div class="card-text text-start"><%= simple_format(@article.description) %></div>
+          <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-outline-success' %>
+          <%= link_to 'Delete', article_path(@article), class: 'btn btn-outline-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+        </div>
+        <div class="card-footer text-muted">
+          <p>Created <%= time_ago_in_words(@article.created_at) %> ago, updated <%= time_ago_in_words(@article.updated_at) %> ago.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
