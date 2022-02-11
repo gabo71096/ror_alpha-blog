@@ -6,7 +6,7 @@
         <div class="card text-center shadow rounded mb-5 bg-white">
           <div class="card-header">
             <p class="fst-italic m-0">
-              by Gabriel López
+              <%= article.user.username if article.user %>
             </p>
           </div>
           <div class="card-body">
