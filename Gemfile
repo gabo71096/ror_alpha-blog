@@ -44,6 +44,10 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Rubocop for style checking
+  gem 'rubocop', '~> 1.25', '>= 1.25.1'
+  # ERB Lint
+  gem 'erb_lint', '~> 0.1.1'
 end
 
 group :test do
