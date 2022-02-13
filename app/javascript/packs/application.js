@@ -8,7 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
+import * as Utilities from "./utilities"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+Utilities.removeFlash();
