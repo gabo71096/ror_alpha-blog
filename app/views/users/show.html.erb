@@ -1,6 +1,8 @@
 <div class="container text-center my-4">
   <h1 class="mb-3"><%= @user.username %>'s profile</h1>
-  <%= gravatar_for @user, size: 200 %>
+  <div class="mb-5">
+    <%= gravatar_for @user, size: 200 %>
+  </div>
   <h1>Articles</h1>
   <%= render 'articles/article' %>
 </div>
