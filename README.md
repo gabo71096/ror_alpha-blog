@@ -1,24 +1,17 @@
-# README
+# Install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Rails
 
-Things you may want to cover:
+Use RVM and install rails and all that jazz
 
-* Ruby version
+### Node
 
-* System dependencies
+Install NVM
 
-* Configuration
+### Yarn
 
-* Database creation
+Install Yarn
 
-* Database initialization
+### Prepare
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Clone repo, cd into it, hit bundle, then yarn add bootstrap popper.js jquery
