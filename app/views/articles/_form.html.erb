@@ -1,15 +1,15 @@
 <%= render 'shared/errors', obj: @article %>
-<%= form_with(model: @article, local: true, class: 'shadow p-3 mb-5 bg-white rounded') do |f| %>
+<%= form_with(model: @article, local: true, class: 'shadow-sm p-3 mb-5 bg-white rounded') do |f| %>
   <div class="row mb-3 text-start">
     <%= f.label :title, class: 'col-form-label col-sm-2' %>
     <div class="col-sm-10">
-      <%= f.text_field :title, class: 'form-control shadow rounded', placeholder: 'Title' %>
+      <%= f.text_field :title, class: 'form-control shadow-sm rounded', placeholder: 'Title' %>
     </div>
   </div>
   <div class="row mb-3 text-start">
     <%= f.label :description, class: 'col-form-label col-sm-2' %>
     <div class="col-sm-10">
-      <%= f.text_area :description, rows: 10, class: 'form-control shadow rounded', placeholder: 'Description' %>
+      <%= f.text_area :description, rows: 10, class: 'form-control shadow-sm rounded', placeholder: 'Description' %>
     </div>
   </div>
   <%= f.submit class: 'btn btn-primary mb-3' %>
