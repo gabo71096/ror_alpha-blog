@@ -21,6 +21,8 @@ gem 'jbuilder'
 # gem 'redis'
 # Use Active Model has_secure_password
 gem 'bcrypt'
+# Pagination gem
+gem 'will_paginate'
 
 # Use Active Storage variant
 # gem 'image_processing'
@@ -48,6 +50,8 @@ group :development do
   gem 'rubocop'
   # ERB Lint
   gem 'erb_lint'
+  # Ruby Language Server
+  gem 'solargraph'
 end
 
 group :test do
