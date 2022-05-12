@@ -10,17 +10,13 @@
     <% end %>
   </div>
 
-  <% if @user.articles.size > 5 %>
-    <div class="apple_pagination mb-3">
-      <%= will_paginate @articles, :container => false %>
-    </div>
-  <% end %>
+  <div class="apple_pagination mb-3">
+    <%= will_paginate @articles, :container => false %>
+  </div>
 
   <%= render 'articles/article' %>
 
-  <% if @user.articles.size > 5 %>
-    <div class="apple_pagination mb-3">
-      <%= will_paginate @articles, :container => false %>
-    </div>
-  <% end %>
+  <div class="apple_pagination mb-3">
+    <%= will_paginate @articles, :container => false %>
+  </div>
 </div>

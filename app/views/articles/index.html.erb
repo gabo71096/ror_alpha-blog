@@ -1,15 +1,11 @@
 <h1 class="text-center my-3">Listing Articles</h1>
 
-<% if @articles.size > 5 %>
-  <div class="apple_pagination mb-3">
-    <%= will_paginate @articles, :container => false %>
-  </div>
-<% end %>
+<div class="apple_pagination mb-3">
+  <%= will_paginate @articles, :container => false %>
+</div>
 
 <%= render 'article' %>
 
-<% if @articles.size > 5 %>
-  <div class="apple_pagination mb-3">
-    <%= will_paginate @articles, :container => false %>
-  </div>
-<% end %>
+<div class="apple_pagination mb-3">
+  <%= will_paginate @articles, :container => false %>
+</div>
