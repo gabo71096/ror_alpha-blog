@@ -5,8 +5,13 @@
   </div>
   <h1>Articles</h1>
   <div class="text-center mb-3">
-    <% if logged_in? && @user == current_user %>
+    <% if logged_in? %>
+     <% if @user == current_user %>
       <%= link_to 'Edit your profile', edit_user_path(@user), class: 'btn btn-outline-info' %>
+     <% end %>
+     <% if current_user.admin? %>
+      <%= link_to 'Delete profile', @user, class: 'btn btn-outline-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+     <% end %>
     <% end %>
   </div>
 
