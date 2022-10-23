@@ -1,0 +1,26 @@
+<h1 class="text-center my-3">Categories</h1>
+
+<div class="apple_pagination mb-3">
+  <%= will_paginate @categories, :container => false %>
+</div>
+
+<div class="container">
+  <% @categories.each do |category| %>
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="card text-center shadow-sm rounded mb-3 bg-white">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to category.name, category_path(category), class: 'text-success' %></h5>
+          </div>
+          <div class="card-footer text-muted">
+            <p>Created <%= time_ago_in_words(category.created_at) %> ago, updated <%= time_ago_in_words(category.updated_at) %> ago.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="apple_pagination mb-3">
+  <%= will_paginate @categories, :container => false %>
+</div>
