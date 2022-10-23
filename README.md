@@ -14,4 +14,4 @@ Install Yarn
 
 ### Prepare
 
-Clone repo, cd into it, hit bundle, then yarn add bootstrap popper.js jquery
+Clone repo, cd into it, hit bundle, rake db:migrate, rails webpacker:install
